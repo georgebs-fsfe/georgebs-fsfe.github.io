@@ -1,2 +1,2 @@
 # vocabulaire / Vokabel / vocabulary
-My space for the V.
+My space for learning words.
