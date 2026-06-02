@@ -664,11 +664,11 @@ const GeorgesFrench = new Map([
 function* getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
   yield GeorgesFrench.get(randomInteger)[0]
-  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench())
+  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench().next().value)
   return GeorgesFrench.get(randomInteger)[1]
-  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench())
+  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench().next().value)
 }
 
 let frenchGenerator = getRandomGeorgesFrench()
-document.getElementByID("button").onclick = function() {frenchGenerator.next().value};
+document.getElementByID("button").onclick = function() {frenchGenerator()};
 
