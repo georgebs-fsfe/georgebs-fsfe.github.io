@@ -662,7 +662,11 @@ const GeorgesFrench = new Map([
 [661, ["Une hausse", "a rise, increase, hike"]]
 ]);
 
-document.getElementByID("button").onclick = function() {getRandomGeorgesFrench()};
+document.getElementByID("button").onclick = function() {buttonresponse()};
+
+function buttonresponse(){
+  document.getElementByID("button").innerHTML = "Oui"
+}
 
 function* getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
