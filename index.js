@@ -663,17 +663,11 @@ const GeorgesFrench = new Map([
 ]);
 
 
-let pret = document.getElementById('btn');
-pret.addEventListener('click', () => {
-                      let french = document.getElementById('french');
-                      let english = document.getElementbyId('english');
-                      let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1;
-                      let randomFrench = GeorgesFrench.get(randomInteger)[0]
-                      let randomEnglish = GeorgesFrench.get(randomInteger)[1]
-                      french.innerHTML = `${randomFrench}`;
-                      english.innerHTML = `${randomEnglish}`;
+function getRandomGeorgesFrench() {
+  let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
+  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
+  document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
 }
-)
 
 
 
