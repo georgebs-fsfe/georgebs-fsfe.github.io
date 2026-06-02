@@ -661,14 +661,16 @@ const GeorgesFrench = new Map([
 [660, ["Rejeter", "emit, release, shift"]],
 [661, ["Une hausse", "a rise, increase, hike"]]
 ]);
+
+document.getElementByID("button").onclick = function() {getRandomGeorgesFrench()};
+
 function* getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
   yield GeorgesFrench.get(randomInteger)[0]
-  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench().next().value)
+  document.getElementByID("button").innerHTML = getRandomGeorgesFrench().next().value.toString()
   return GeorgesFrench.get(randomInteger)[1]
-  document.getElementByID("button").innerHTML = string(getRandomGeorgesFrench().next().value)
+  document.getElementByID("button").innerHTML = getRandomGeorgesFrench().next().value.toString()
 }
 
-let frenchGenerator = getRandomGeorgesFrench()
-document.getElementByID("button").onclick = function() {frenchGenerator()};
+
 
