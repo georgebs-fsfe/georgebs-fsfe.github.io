@@ -668,5 +668,5 @@ function* getRandomGeorgesFrench() {
 }
 
 let frenchGenerator = getRandomGeorgesFrench()
-console.log(frenchGenerator.next().value)
-console.log(frenchGenerator.next().value)
+button.onclick = function(){frenchGenerator.next().value};
+
