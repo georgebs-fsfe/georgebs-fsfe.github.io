@@ -695,17 +695,23 @@ const GeorgesFrench = new Map([
 
 
 let integerArray = []
-let VocabLog = new Map()
-function getRandomGeorgesFrench() {
-  let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
-  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
-  document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
-  let frenchBeen = document.getElementById("french").value
-  let englishBeen = document.getElementById("english").value
-  VocabLog.set(randomInteger, [frenchBeen+": "+englishBeen])
-  integerArray.unshift(randomInteger)
-  document.getElementById("previous").value = VocabLog.get(integerArray[1])
-}
+      let VocabLog = new Map()
+      function getRandomGeorgesFrench() {
+      	let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
+      	document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
+        document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
+        document.getElementById("french").size = GeorgesFrench.get(randomInteger)[0].length;
+        document.getElementById("english").size = GeorgesFrench.get(randomInteger)[1].length;
+        let frenchBeen = document.getElementById("french").value
+        let englishBeen = document.getElementById("english").value
+        VocabLog.set(randomInteger, [frenchBeen+": "+englishBeen])
+        integerArray.unshift(randomInteger)
+        document.getElementById("previous").value = ""
+        if(integerArray.length>1){
+        	document.getElementById("previous").value = VocabLog.get(integerArray[1])
+          document.getElementById("previous").size = VocabLog.get(integerArray[1])[0].length
+        }
+      }
 
 
 
