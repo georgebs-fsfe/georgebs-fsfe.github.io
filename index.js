@@ -706,7 +706,6 @@ function getRandomGeorgesFrench() {
   integerArray.unshift(randomInteger)
   document.getElementById("previous").value = VocabLog.get(integerArray[1])
 }
-}
 
 
 
