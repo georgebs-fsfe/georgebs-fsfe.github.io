@@ -695,8 +695,8 @@ const GeorgesFrench = new Map([
 
 
 let integerArray = []
-      let VocabLog = new Map()
-      function getRandomGeorgesFrench() {
+let VocabLog = new Map()
+function getRandomGeorgesFrench() {
       	let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
       	document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
         document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
@@ -711,7 +711,16 @@ let integerArray = []
         	document.getElementById("previous").value = VocabLog.get(integerArray[1])
           document.getElementById("previous").size = VocabLog.get(integerArray[1])[0].length
         }
-      }
+}
 
+function coverFrench() {
+      document.getElementById("french").style.color = "red"
+      document.getElementById("french").style.backgroundColor = "red"
+}
+
+function coverEnglish() {
+      document.getElementById("french").style.color = "red"
+      document.getElementById("french").style.backgroundColor = "red"
+}
 
 
