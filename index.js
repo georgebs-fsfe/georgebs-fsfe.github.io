@@ -714,13 +714,21 @@ function getRandomGeorgesFrench() {
 }
 
 function* coverFrench() {
-      yield document.getElementById("french").style.backgroundColor = "black"
-      return document.getElementById("french").style.backgroundColor = none
+      document.getElementById("french").style.backgroundColor = "red;"
+      document.getElementById("french").style.Color = "red"
+      yield 1
+      document.getElementById("french").style.backgroundColor = "black;"
+      document.getElementById("french").style.Color = "white;"
+      yield 2
 }
 
 function* coverEnglish() {
-      yield document.getElementById("english").style.backgroundColor = "black"
-      return document.getElementById("english").style.backgroundColor = none
+      document.getElementById("english").style.backgroundColor = "red;"
+      document.getElementById("english").style.Color = "red"
+      yield 1
+      document.getElementById("english").style.backgroundColor = "black;"
+      document.getElementById("english").style.Color = "white;"
+      yield 2
 }
 
 
