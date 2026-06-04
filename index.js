@@ -712,6 +712,12 @@ const GeorgesFrench = new Map([
         if(integerArray.length>1){
           document.getElementById("previous").innerHTML = "Last: "+VocabLog.get(integerArray[1])
         }
+            let englishcounter = 1
+            let frenchcounter = 0
+            document.getElementById("english").style.backgroundColor = "red";
+            document.getElementById("english").style.color = "red";
+            document.getElementById("french").style.backgroundColor = "";
+            document.getElementById("french").style.color = "";
       }
       function coverFrench() {
         if(frenchcounter%2===0){
