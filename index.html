@@ -6,16 +6,13 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <p style = "color: blue;">French: <input id="french" value="" size = "50" readonly></p> 
+        <button onclick = "getRandomGeorgesFrench()">"Allez!"</button>
+        <p>French: <input id="french" value="" size = "50" readonly></p>
+        <button onclick = "coverFrench()" style = "background-color: red"></button>
+        <p>English: <input id="english" value ="" size = "50" style="color:red; background-color:red;" readonly></p>
+        <button onclick = "coverEnglish()" style = "background-color: red"></button>
         <br>
-        <button onclick = "coverFrench.next()">"cache"</button>
-        <p style = "color: blue;">English: <input id="english" value ="" size = "50" readonly></p>
-        <br>
-        <button onclick = "coverEnglish.next()">"hide"</button>
-        <br>
-        <button onclick = "getRandomGeorgesFrench()">"Essayez-vous"</button>
-        <br>
-        <p style = "color: blue;">Previous: <input id="previous" value ="" size = "" readonly></p>
+        <p id = "previous"></p>
       <script src="index.js"></script>
     </body>
 </html>
