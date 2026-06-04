@@ -660,13 +660,51 @@ const GeorgesFrench = new Map([
 [659, ["Verb + le mieux ", "best (adverb)"]],
 [660, ["Rejeter", "emit, release, shift"]],
 [661, ["Une hausse", "a rise, increase, hike"]]
-]);
+[662, ["Le milieu", "middle"]],
+[663, ["Avi + SUR", "opinion about"]],
+[664, ["La ficelle", "string"]],
+[665, ["Recoudre", "to stitch"]],
+[666, ["L’infirmier", "nurse"]],
+[667, ["L’arme", "weapon"]],
+[668, ["Tout en", "while"]],
+[669, ["Tout de même", "all the same"]],
+[670, ["Suit", "follows"]],
+[671, ["Laïcité", "secularity"]],
+[672, ["Lier", "to tie"]],
+[673, ["Élu", "chosen"]],
+[674, ["En tant que", "as (something)"]],
+[675, ["En tant que tel", "in its current form"]],
+[676, ["Saisir", "seize"]],
+[677, ["En fait", "actually"]],
+[678, ["De plus", "what’s more"]],
+[679, ["À tous", "to all"]],
+[680, ["Inébranlable", "unwavering"]],
+[681, ["Enivré", "inebriated"]],
+[682, ["Inaccessible", "inaccessible"]],
+[683, ["Studieux", "studious"]],
+[684, ["J’en veux un peu plus"]],
+[685, ["Je n’en veux plus"]],
+[686, ["Elle ne mange pas assez de légumes"]],
+[687, ["Matières grasses", "fat"]],
+[688, ["Je lui conseillerais", "I advised him"]],
+[689, ["Digérer le pain", "digest bread"]],
+[690, ["Pain de mie", "soft bread"]],
+[691, ["Corvée", "chore"]],
+[692, ["Bricolage", "DIY"]],
+[693, ["Poterie", "pottery"]]]);
 
 
 function getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
-  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
+  let integerString = []
+  integerString.unshift(randomInteger)
+  let vocabLog = new Map()
+  let frenchBeen = document.getElementById("french").value
+  let englishBeen = document.getElementById("english").value
+  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0]
   document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
+  vocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
+  document.getElementById("previous").value = vocabLog.get(integerString[1])
 }
 
 
