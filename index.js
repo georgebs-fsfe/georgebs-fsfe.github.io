@@ -694,9 +694,11 @@ const GeorgesFrench = new Map([
 [693, ["Poterie", "pottery"]]]);
 
 
-let integerArray = []
-let VocabLog = new Map()
-function getRandomGeorgesFrench() {
+      let integerArray = []
+      let VocabLog = new Map()
+      let englishcounter = 1
+      let frenchcounter = 0
+      function getRandomGeorgesFrench() {
       	let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
       	document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
         document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
@@ -704,35 +706,30 @@ function getRandomGeorgesFrench() {
         document.getElementById("english").size = GeorgesFrench.get(randomInteger)[1].length;
         let frenchBeen = document.getElementById("french").value
         let englishBeen = document.getElementById("english").value
-        VocabLog.set(randomInteger, [frenchBeen+": "+englishBeen])
+        VocabLog.set(randomInteger, [frenchBeen+" - "+englishBeen])
         integerArray.unshift(randomInteger)
         document.getElementById("previous").value = ""
         if(integerArray.length>1){
-        	document.getElementById("previous").value = VocabLog.get(integerArray[1])
-          document.getElementById("previous").size = VocabLog.get(integerArray[1])[0].length
+          document.getElementById("previous").innerHTML = "Last: "+VocabLog.get(integerArray[1])
         }
-}
-
-function* coverFrench() {
-      document.getElementById("french").style.backgroundColor = "red;"
-      document.getElementById("french").style.Color = "red"
-      yield 1
-      document.getElementById("french").style.backgroundColor = "black;"
-      document.getElementById("french").style.Color = "white;"
-      yield 2
-}
-
-let coverFrench = coverFrench()
-
-function* coverEnglish() {
-      document.getElementById("english").style.backgroundColor = "red;"
-      document.getElementById("english").style.Color = "red"
-      yield 1
-      document.getElementById("english").style.backgroundColor = "black;"
-      document.getElementById("english").style.Color = "white;"
-      yield 2
-}
-
-let coverEnglish = coverEnglish()
+      }
+      function coverFrench() {
+        if(frenchcounter%2===0){
+        document.getElementById("french").style.backgroundColor = "red"
+        document.getElementById("french").style.color = "red"
+        }else if(document.getElementById("french").style.backgroundColor = "red"){document.getElementById("french").style.backgroundColor = ""
+        document.getElementById("french").style.color = ""
+        }
+        frenchcounter ++
+      }
+      function coverEnglish() {
+        if(englishcounter%2!==0){
+        document.getElementById("english").style.backgroundColor = ""
+        document.getElementById("english").style.color = ""
+        }else{document.getElementById("english").style.backgroundColor = "red";
+        document.getElementById("english").style.color = "red"
+        }
+        englishcounter ++
+      }
 
 
