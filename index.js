@@ -722,6 +722,8 @@ function* coverFrench() {
       yield 2
 }
 
+let coverFrench = coverFrench()
+
 function* coverEnglish() {
       document.getElementById("english").style.backgroundColor = "red;"
       document.getElementById("english").style.Color = "red"
@@ -730,5 +732,7 @@ function* coverEnglish() {
       document.getElementById("english").style.Color = "white;"
       yield 2
 }
+
+let coverEnglish = coverEnglish()
 
 
