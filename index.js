@@ -703,7 +703,7 @@ function getRandomGeorgesFrench() {
   let VocabLog = new Map()
   let frenchBeen = document.getElementById("french").value
   let englishBeen = document.getElementById("english").value
-  VocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
+  VocabLog.set(randomInteger, [frenchBeen, englishBeen])
   document.getElementById("previous").value = VocabLog.get(integerString[1])
 
 }
