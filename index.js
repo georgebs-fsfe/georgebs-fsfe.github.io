@@ -699,19 +699,19 @@ const GeorgesFrench = new Map([
       let englishcounter = 1
       let frenchcounter = 0
       function getRandomGeorgesFrench() {
-      	let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
+            let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
       	document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
-        document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
-        document.getElementById("french").size = GeorgesFrench.get(randomInteger)[0].length;
-        document.getElementById("english").size = GeorgesFrench.get(randomInteger)[1].length;
-        let frenchBeen = document.getElementById("french").value
-        let englishBeen = document.getElementById("english").value
-        VocabLog.set(randomInteger, [frenchBeen+" - "+englishBeen])
-        integerArray.unshift(randomInteger)
-        document.getElementById("previous").value = ""
-        if(integerArray.length>1){
-          document.getElementById("previous").innerHTML = "Last: "+VocabLog.get(integerArray[1])
-        }
+            document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
+            document.getElementById("french").size = GeorgesFrench.get(randomInteger)[0].length;
+            document.getElementById("english").size = GeorgesFrench.get(randomInteger)[1].length;
+            let frenchBeen = document.getElementById("french").value
+            let englishBeen = document.getElementById("english").value
+            VocabLog.set(randomInteger, [frenchBeen+" - "+englishBeen])
+            integerArray.unshift(randomInteger)
+            document.getElementById("previous").value = ""
+            if(integerArray.length>1){
+                  document.getElementById("previous").innerHTML = "Last: "+VocabLog.get(integerArray[1])
+            }
             let englishcounter = 1
             let frenchcounter = 0
             document.getElementById("english").style.backgroundColor = "red";
