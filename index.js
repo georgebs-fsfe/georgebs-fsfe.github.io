@@ -696,15 +696,15 @@ const GeorgesFrench = new Map([
 
 function getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
+  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
+  document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
   let integerString = []
   integerString.unshift(randomInteger)
-  let vocabLog = new Map()
+  let VocabLog = new Map()
   let frenchBeen = document.getElementById("french").value
   let englishBeen = document.getElementById("english").value
-  document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0]
-  document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
-  vocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
-  document.getElementById("previous").value = vocabLog.get(integerString[1])
+  VocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
+  document.getElementById("previous").value = VocabLog.get(integerString[1])
 }
 
 
