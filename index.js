@@ -698,13 +698,6 @@ function getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
   document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
   document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
-  let integerString = []
-  integerString.unshift(randomInteger)
-  let VocabLog = new Map()
-  let frenchBeen = document.getElementById("french").value
-  let englishBeen = document.getElementById("english").value
-  VocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
-  document.getElementById("previous").value = VocabLog.get(integerString[1])
 }
 
 
