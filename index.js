@@ -659,7 +659,7 @@ const GeorgesFrench = new Map([
 [658, ["Je meurs de faim", "I’m starving"]],
 [659, ["Verb + le mieux ", "best (adverb)"]],
 [660, ["Rejeter", "emit, release, shift"]],
-[661, ["Une hausse", "a rise, increase, hike"]]
+[661, ["Une hausse", "a rise, increase, hike"]],
 [662, ["Le milieu", "middle"]],
 [663, ["Avi + SUR", "opinion about"]],
 [664, ["La ficelle", "string"]],
@@ -698,6 +698,14 @@ function getRandomGeorgesFrench() {
   let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
   document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
   document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
+  let integerString = []
+  integerString.unshift(randomInteger)
+  let VocabLog = new Map()
+  let frenchBeen = document.getElementById("french").value
+  let englishBeen = document.getElementById("english").value
+  VocabLog.set(randomInteger, frenchBeen, ": ", englishBeen)
+  document.getElementById("previous").value = VocabLog.get(integerString[1])
+
 }
 
 
