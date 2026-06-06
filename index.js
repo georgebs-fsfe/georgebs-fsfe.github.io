@@ -702,8 +702,6 @@ const GeorgesFrench = new Map([
             let randomInteger = (Math.floor(Math.random() * GeorgesFrench.size))+1
       	document.getElementById("french").value = GeorgesFrench.get(randomInteger)[0];
             document.getElementById("english").value = GeorgesFrench.get(randomInteger)[1];
-            document.getElementById("french").size = GeorgesFrench.get(randomInteger)[0].length;
-            document.getElementById("english").size = GeorgesFrench.get(randomInteger)[1].length;
             let frenchBeen = document.getElementById("french").value
             let englishBeen = document.getElementById("english").value
             VocabLog.set(randomInteger, [frenchBeen+" - "+englishBeen])
@@ -712,12 +710,6 @@ const GeorgesFrench = new Map([
             if(integerArray.length>1){
                   document.getElementById("previous").innerHTML = "Last: "+VocabLog.get(integerArray[1])
             }
-            let englishcounter = 1
-            let frenchcounter = 0
-            document.getElementById("english").style.backgroundColor = "red";
-            document.getElementById("english").style.color = "red";
-            document.getElementById("french").style.backgroundColor = "";
-            document.getElementById("french").style.color = "";
       }
       function coverFrench() {
         if(frenchcounter%2===0){
