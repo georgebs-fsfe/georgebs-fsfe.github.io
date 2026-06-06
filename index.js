@@ -712,22 +712,22 @@ const GeorgesFrench = new Map([
             }
       }
       function coverFrench() {
-        if(frenchcounter%2===0){
-        document.getElementById("french").style.backgroundColor = "red"
-        document.getElementById("french").style.color = "red"
-        }else if(document.getElementById("french").style.backgroundColor = "red"){document.getElementById("french").style.backgroundColor = ""
-        document.getElementById("french").style.color = ""
-        }
-        frenchcounter ++
+            if(frenchcounter%2===0){
+            document.getElementById("french").style.backgroundColor = "red"
+            document.getElementById("french").style.color = "red"
+            }else if(document.getElementById("french").style.backgroundColor = "red"){document.getElementById("french").style.backgroundColor = ""
+            document.getElementById("french").style.color = ""
+            }
+            frenchcounter ++
       }
       function coverEnglish() {
-        if(englishcounter%2!==0){
-        document.getElementById("english").style.backgroundColor = ""
-        document.getElementById("english").style.color = ""
-        }else{document.getElementById("english").style.backgroundColor = "red";
-        document.getElementById("english").style.color = "red"
-        }
-        englishcounter ++
+            if(englishcounter%2!==0){
+            document.getElementById("english").style.backgroundColor = ""
+            document.getElementById("english").style.color = ""
+            }else{document.getElementById("english").style.backgroundColor = "red";
+            document.getElementById("english").style.color = "red"
+            }
+            englishcounter ++
       }
 
 
